@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
-const currency = () => {
+const Currency = () => {
   const {dispatch} = useContext(AppContext);
 
 	const changeCurrency = (val)=>{
@@ -10,7 +10,6 @@ const currency = () => {
 				payload: val,
 			})
 	}
-	
 
   return (
 		<div className='alert alert-success' >
@@ -19,11 +18,11 @@ const currency = () => {
         <option style={{color:'black'}}  value="$">($)Dollar</option>
         <option style={{color:'black'}} value="£">(£)Pound</option>
         <option style={{color:'black'}} value="€">(€)Euro</option>
-        <option style={{color:'black'}}  value="₹">(₹)Ruppee</option>
+        <option style={{color:'black'}}  value="₹">(₹)Rupee</option>
       </select>
       </label>
     </div>
 	);
 };
 
-export default currency;
+export default Currency;
